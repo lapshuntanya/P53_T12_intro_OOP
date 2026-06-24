@@ -18,7 +18,15 @@ class Card {
     unsigned short PIN;         //Код картки
     double cash;                //Сума грошей на картці
 
+public:
+    /*--------------- Методи (methods) ----------------------------*/
+    /*--------- Конструктори -----------------*/
+    Card(); //Конструктор за замовчуванням
+    Card(const char* name, const char* expiredDate, double cash = 0); //Конструктор з параметрами
+    ~Card(); //Деструктор
 
+
+    void showInfo();
 };
 
 
