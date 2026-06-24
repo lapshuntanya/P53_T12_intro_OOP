@@ -48,7 +48,20 @@ int main() {
        cout << "+++++++++++++++++++++++++++\n";
        cin >> menu;
 
-
+       switch (menu) {
+           case 1: user->showInfo(); break;
+           case 2: {
+               int a =0; cout << "Input pin code: "; cin >> a;
+               if ( a == user->getPIN()) cout << "Current balance: " << user->getCash() << "UAH\n";
+               else cout << "Invalid pin!!!\n";
+           }break;
+           case 3: {
+               int a =0, b= 0;
+               cout << "Input current pin code: "; cin >> a;
+               cout << "Input a new pin code: "; cin >> b;
+               user->setPIN(a, b);
+           }break;
+       }
 
    } while (menu!=0);
 
