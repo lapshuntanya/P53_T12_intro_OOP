@@ -31,7 +31,17 @@ Card::Card(const char *name, const char *expiredDate, double cash) {
 }
 
 Card::~Card() {
+    delete[] name;
+    cout << "Closed: " << cardNumber << endl;
 }
 
 void Card::showInfo() {
+    cout << "==================================\n";
+    cout << "Client: " << name << endl;
+    cout << "Number: " << cardNumber << endl;
+    cout << "Exp date: " << expiredDate << endl;
+    cout << "==================================\n";
+    cout << "PIN: " << PIN << endl;
+    cout << "Cash: " << cash << "UAH." << endl;
+    cout << "==================================\n";
 }
