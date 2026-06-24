@@ -12,18 +12,28 @@ using namespace std;
 
 class Card {
     /*---------------- Поля (fields) ------------------------*/
-    unsigned long cardNumber;   //Номер картки
-    char* name;                 //Ім’я власника
-    char expiredDate[6];        //Дата дії
-    unsigned short PIN;         //Код картки
-    double cash;                //Сума грошей на картці
+    unsigned long cardNumber;   //Номер картки      get
+    char* name;                 //Ім’я власника     get
+    char expiredDate[6];        //Дата дії          get
+    unsigned short PIN;         //Код картки        get+set
+    double cash;                //Сума грошей на картці     get
 
 public:
     /*--------------- Методи (methods) ----------------------------*/
-    /*--------- Конструктори -----------------*/
+    /*--------- Конструктори/Деструктор -----------------*/
     Card(); //Конструктор за замовчуванням
     Card(const char* name, const char* expiredDate, double cash = 0); //Конструктор з параметрами
     ~Card(); //Деструктор
+
+
+    /*--------- Аксесори (get+set) -----------------*/
+    unsigned long getCardNumber();
+    const char* getName();
+    const char* getExpDate();
+    unsigned short getPIN();
+    double getCash();
+
+    bool setPIN(int oldPIN, int newPIN);
 
 
     void showInfo();

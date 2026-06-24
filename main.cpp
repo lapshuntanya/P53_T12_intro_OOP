@@ -2,7 +2,7 @@
 
 int main() {
 
-    Card Daniil;
+   /* Card Daniil;
     Card Daria("Zavizlova Daria", "06.46", 5000);
 
     Card* Volodymyr = new Card();
@@ -18,7 +18,10 @@ int main() {
 
     //------------------ end
     delete Volodymyr;
-    delete Marko;
+    delete Marko;*/
+
+
+
 
     return 0;
 }
